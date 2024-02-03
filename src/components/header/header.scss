@@ -1,0 +1,11 @@
+header.page-header {
+  @apply flex items-center justify-between bg-white py-1 w-full border-b px-6;
+
+  h1 {
+    @apply font-semibold;
+  }
+
+  input.input {
+    @apply text-sm py-1 shadow-sm;
+  }
+}

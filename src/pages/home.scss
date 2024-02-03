@@ -1,0 +1,7 @@
+.home.page {
+  @apply flex flex-row bg-white;
+
+  .outlet {
+    @apply flex flex-1 shadow-sm h-full w-full border-l;
+  }
+}

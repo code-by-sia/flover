@@ -1,0 +1,7 @@
+aside.side-bar {
+    @apply flex flex-col items-center bg-neutral-100 p-3 w-48 gap-5;
+    
+    .logo {
+        @apply my-2;
+    }
+}

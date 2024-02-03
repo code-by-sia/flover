@@ -1,0 +1,46 @@
+table.data-table {
+  thead {
+    th {
+      @apply font-light text-gray-600 hover:text-black text-center p-2 py-4  items-center;
+      span {
+        @apply flex items-center justify-center cursor-pointer;
+        .sort-icon {
+          @apply text-gray-400 h-4;
+        }
+      }
+    }
+  }
+
+  tbody {
+    @apply divide-y divide-neutral-50;
+    tr {
+      @apply bg-white cursor-pointer;
+
+      &:first-child {
+        td {
+          &:first-child {
+            @apply rounded-tl-lg;
+          }
+
+          &:last-child {
+            @apply rounded-tr-lg;
+          }
+        }
+      }
+      &:last-child {
+        td {
+          &:first-child {
+            @apply rounded-bl-lg;
+          }
+
+          &:last-child {
+            @apply rounded-br-lg;
+          }
+        }
+      }
+      td {
+        @apply p-2 shadow-sm;
+      }
+    }
+  }
+}

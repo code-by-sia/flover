@@ -1,0 +1,45 @@
+.tree-nav {
+  @apply flex flex-col duration-100 ease-in;
+
+  li {
+    @apply flex flex-col;
+
+    label {
+      @apply flex text-gray-600 py-1 rounded-md cursor-pointer ps-5 items-center overflow-ellipsis whitespace-nowrap;
+
+      .link {
+        @apply flex  items-center;
+      }
+
+      &.selected {
+        @apply bg-gray-300;
+      }
+
+      &:has(.toggle) {
+        @apply ps-1;
+      }
+
+      .icon {
+        @apply h-4 me-2 text-primary;
+
+        &.toggle {
+          @apply w-3 me-1 stroke-2 text-gray-950;
+        }
+      }
+    }
+
+    & > .tree-nav {
+      @apply flex flex-col max-h-0 overflow-hidden;
+    }
+
+    &.open {
+      & > .tree-nav {
+        @apply max-h-64;
+
+        li label {
+          @apply ps-9;
+        }
+      }
+    }
+  }
+}
