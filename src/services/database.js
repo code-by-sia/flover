@@ -19,6 +19,7 @@ class Database {
         }
         request.onupgradeneeded = (e) => {
           const db = e.target.result
+
           Object.entries(this.schema).forEach(
             ([
               name,

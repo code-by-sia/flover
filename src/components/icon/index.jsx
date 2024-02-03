@@ -1,4 +1,6 @@
 import {
+  ArchiveBoxIcon,
+  Bars2Icon,
   BookmarkIcon,
   CalendarDaysIcon,
   ChevronDownIcon,
@@ -10,12 +12,16 @@ import {
   FolderIcon,
   FolderOpenIcon,
   HeartIcon,
+  MagnifyingGlassIcon,
+  PlusIcon,
   RssIcon,
   ShoppingBagIcon,
   TagIcon,
+  ViewColumnsIcon,
   WindowIcon,
 } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
+import { PlusCircleIcon } from '@heroicons/react/24/solid'
 
 const ICONS = {
   Clock: ClockIcon,
@@ -33,6 +39,12 @@ const ICONS = {
   ChevronRight: ChevronRightIcon,
   ChevronLeft: ChevronLeftIcon,
   ChevronUp: ChevronUpIcon,
+  MagnifyingGlass: MagnifyingGlassIcon,
+  ViewColumns: ViewColumnsIcon,
+  PlusCircle: PlusCircleIcon,
+  Plus: PlusIcon,
+  ArchiveBox: ArchiveBoxIcon,
+  Bar2: Bars2Icon,
 }
 
 export default function Icon({ name, className, ...props }) {

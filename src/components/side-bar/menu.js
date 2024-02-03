@@ -1,8 +1,7 @@
 export const createCategoriesMenu = (categories) => ({
   id: '/categories/all',
   value: 'Alle',
-  icon: 'Folder',
-  openIcon: 'FolderOpen',
+  icon: 'ArchiveBox',
   items: categories?.map(({ id, value }) => ({
     id: `/categories/${id}`,
     icon: 'Tag',

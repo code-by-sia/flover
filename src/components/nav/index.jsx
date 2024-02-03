@@ -2,9 +2,9 @@ import List from '@/components/list'
 
 import { useState } from 'react'
 import classNames from 'classnames'
-import './nav.scss'
 import { Link } from 'react-router-dom'
 import Icon from '@/components/icon'
+import './nav.scss'
 
 function TreeItem({
   id,
@@ -31,7 +31,7 @@ function TreeItem({
           />
         )}
         <Link className="link" to={id}>
-          <Icon name={isOpen ? openIcon : icon} />
+          <Icon name={icon} />
           {value}
         </Link>
       </label>
