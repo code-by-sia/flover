@@ -1,7 +1,7 @@
 .browser {
-  @apply flex-1;
+  @apply flex flex-col flex-1 border-e;
 
-  & > .header {
+  & > .drawer-header {
     @apply bg-neutral-100 border-b;
 
     .url-input {
@@ -16,10 +16,5 @@
       }
     }
   }
-
-  &:hover {
-    > .header {
-      @apply shadow-none;
-    }
-  }
+ 
 }
