@@ -16,6 +16,17 @@ button.button {
   &.link {
     @apply text-primary underline-offset-4 hover:underline;
   }
+  &.toolbar {
+    @apply bg-neutral-200 shadow-none text-gray-600 font-normal rounded-full p-1.5 pe-3 h-7 gap-1;
+
+    &:active {
+      @apply shadow-none bg-gray-400;
+    }
+
+    &:hover {
+      @apply bg-gray-300 shadow-none;
+    }
+  }
 
   &:disabled {
     @apply pointer-events-none opacity-50;

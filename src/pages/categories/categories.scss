@@ -8,6 +8,22 @@
   }
 }
 
+.categories-empty-page {
+  @apply flex-1 flex flex-col justify-center items-center;
+
+  .toolbar {
+    @apply m-3 place-self-end;
+
+    .icon {
+      @apply stroke-2;
+    }
+  }
+
+  .icon.empty {
+    @apply w-36 mx-auto stroke-[0.04em] text-gray-200 my-auto;
+  }
+}
+
 .recipe {
   @apply flex gap-3 rounded-lg m-3 p-2 hover:bg-neutral-100 cursor-pointer;
 

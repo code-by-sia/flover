@@ -15,7 +15,7 @@
     div {
       @apply flex-1 flex flex-col border-b py-2 items-start uppercase font-medium leading-none;
       span {
-          @apply text-xs font-semibold;
+        @apply text-xs font-semibold;
       }
       small {
         @apply text-neutral-400  text-xs;

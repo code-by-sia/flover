@@ -5,9 +5,10 @@ import { useMemo } from 'react'
 import DrawerHeader from '@/components/container/drawe-header'
 import useQuery from '@/services/query'
 import RecipeItem from '@/pages/categories/recipe-item'
-import './categories.scss'
 import Icon from '@/components/icon'
 import { Categories } from '@/services/categories'
+import Button from '@/components/button'
+import './categories.scss'
 
 function CategoryHeader({ name, count }) {
   return (
@@ -17,13 +18,13 @@ function CategoryHeader({ name, count }) {
         <small>{count} Rezepte</small>
       </div>
       <Icon name="MagnifyingGlass" />
-      <Icon name="PlusCircle" />
+      <Icon name="SolidPlusCircle" />
     </DrawerHeader>
   )
 }
 
 export default function CategoriesHomePage() {
-  const { categoryId } = useParams()
+  const { categoryId, recipeId } = useParams()
   const category = useQuery('categories', categoryId)
   const title = useMemo(
     () => category?.value || Categories[categoryId]?.value || categoryId,
@@ -38,6 +39,15 @@ export default function CategoriesHomePage() {
         title={<CategoryHeader name={title} count={6} />}
       />
       <Outlet />
+      {!recipeId && (
+        <div className="categories-empty-page">
+          <Button className="toolbar">
+            <Icon name="PlusCircle" />
+            Neues Rezept
+          </Button>
+          <Icon className="empty" name="Newspaper" />
+        </div>
+      )}
     </>
   )
 }
