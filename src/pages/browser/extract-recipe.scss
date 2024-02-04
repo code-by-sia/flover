@@ -1,26 +1,25 @@
 .new-recipe {
-    @apply w-96 flex flex-col gap-2;
-    
-    
-    & > h1.title {
-      @apply font-bold font-serif text-2xl p-6;  
-    }
+  @apply w-96 flex flex-col gap-2;
 
+  & > h1.title {
+    @apply font-bold font-serif text-2xl p-6;
+  }
 
-    & > .attributes {
-        @apply flex gap-1 justify-start px-6 divide-x;
-        .tag {
-            @apply px-2;
-            
-            &:first-child { @apply ps-0;}
-        
-            
-            span {
-                @apply flex flex-col;
-            }
-            small {
-                @apply text-gray-500;
-            }
-        }
+  & > .attributes {
+    @apply flex gap-1 justify-start px-6 divide-x;
+    .tag {
+      @apply px-2;
+
+      &:first-child {
+        @apply ps-0;
+      }
+
+      span {
+        @apply flex flex-col;
+      }
+      small {
+        @apply text-gray-500;
+      }
     }
+  }
 }

@@ -1,7 +1,15 @@
 aside.side-bar {
-  @apply flex flex-col items-center bg-neutral-100 p-3 w-48 gap-5 overflow-y-scroll h-full;
+  @apply flex flex-col items-center bg-neutral-100 w-0 gap-5 overflow-y-scroll h-full duration-1000 overflow-x-clip;
+
+  .tree-nav, .logo {
+      @apply min-w-max ;
+  }
+
+  &.open {
+    @apply w-48 -left-48;
+  }
 
   .logo {
-    @apply my-2;
+    @apply mx-2 mt-6;
   }
 }

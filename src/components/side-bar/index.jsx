@@ -13,16 +13,20 @@ import {
   Uncategorized,
   WishList,
 } from '@/components/side-bar/menu'
+import classNames from 'classnames'
 import './side-bar.scss'
 
 export default function SideBar() {
-  const { categories, rss } = useSelector((state) => state.data)
+  const { categories, rss, isSideBarOpen } = useSelector((state) => ({
+    ...state.data,
+    isSideBarOpen: state.setting.sidebar.open,
+  }))
   const { pathname } = useLocation()
   const All = createCategoriesMenu(categories)
   const RssFeeds = createRssFeedMenu(rss)
 
   return (
-    <aside className="side-bar">
+    <aside className={classNames('side-bar', { open: isSideBarOpen })}>
       <Logo />
       <TreeNav
         items={[All, NewCategories, Flagged, WishList, Uncategorized]}
