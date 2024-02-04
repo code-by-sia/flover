@@ -28,7 +28,7 @@ export default function SideBar() {
         items={[All, NewCategories, Flagged, WishList, Uncategorized]}
         value={pathname}
       />
-      <TreeNav items={[RssFeeds, Browser, Calendar, Basket]} />
+      <TreeNav items={[RssFeeds, Browser, Calendar, Basket]} value={pathname} />
     </aside>
   )
 }

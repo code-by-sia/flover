@@ -1,0 +1,29 @@
+.recipe {
+  @apply flex gap-3 rounded-lg m-3 p-2 hover:bg-neutral-100 cursor-pointer;
+
+  > img {
+    @apply h-20 rounded-lg;
+  }
+
+  .info {
+    @apply flex flex-col gap-1 ms-1;
+
+    .title {
+      @apply font-medium leading-tight;
+    }
+
+    .attributes {
+      @apply flex divide-x;
+
+      .tag {
+        @apply px-0.5;
+        &:first-child {
+          @apply ps-0;
+        }
+      }
+    }
+  }
+  p {
+    @apply text-xs text-gray-400 leading-tight mt-1;
+  }
+}

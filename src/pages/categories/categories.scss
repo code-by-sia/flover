@@ -1,13 +1,3 @@
-.categories {
-  @apply border-e overflow-hidden w-80;
-
-  &:hover {
-    .header {
-      @apply shadow;
-    }
-  }
-}
-
 .categories-empty-page {
   @apply flex-1 flex flex-col justify-center items-center;
 
@@ -21,33 +11,5 @@
 
   .icon.empty {
     @apply w-36 mx-auto stroke-[0.04em] text-gray-200 my-auto;
-  }
-}
-
-.recipe {
-  @apply flex gap-3 rounded-lg m-3 p-2 hover:bg-neutral-100 cursor-pointer;
-
-  > img {
-    @apply h-16 rounded-lg;
-  }
-  .info {
-    @apply flex flex-col gap-1 ms-1;
-
-    .title {
-      @apply text-2xl font-extralight;
-    }
-
-    .attributes {
-      @apply flex divide-x text-gray-600 items-center;
-      span {
-        @apply flex whitespace-nowrap text-xs px-2;
-      }
-      .icon {
-        @apply h-3.5 me-1;
-      }
-    }
-  }
-  p {
-    @apply text-sm text-gray-400 leading-relaxed mt-2;
   }
 }

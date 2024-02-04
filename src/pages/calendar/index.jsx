@@ -1,33 +1,9 @@
-import { Outlet } from 'react-router-dom'
-import List from '@/components/list'
-import DrawerHeader from '@/components/container/drawe-header'
 import moment from 'moment'
 import { useMemo } from 'react'
 import Icon from '@/components/icon'
-import classNames from 'classnames'
+import { SideBarListPage } from '@/components/container/side-bar'
+import Day from '@/pages/calendar/day'
 import './calendar.scss'
-
-function Day({ value, isSameDay, isSameYear }) {
-  return (
-    <li
-      className={classNames('date', {
-        today: isSameDay,
-        'another-year': !isSameYear,
-      })}
-    >
-      <h1>{value.format('DD')}</h1>
-      <div id={isSameDay ? 'today-date' : undefined}>
-        <span>{value.format('dddd')}</span>
-        <small>
-          {value.format('MMMM')}
-          &nbsp;
-          {isSameYear ? '' : value.format('YYYY')}
-        </small>
-      </div>
-      <Icon name="Plus" />
-    </li>
-  )
-}
 
 export default function CalendarPage() {
   const dates = useMemo(() => {
@@ -43,24 +19,12 @@ export default function CalendarPage() {
       }))
   }, [])
 
-  console.log([...dates])
-
   return (
-    <>
-      <List
-        className="calendar-page"
-        items={dates}
-        view={Day}
-        title={
-          <DrawerHeader>
-            <div className="title">Kalendar</div>
-            <a href="#today-date">
-              <Icon name="Bar2" />
-            </a>
-          </DrawerHeader>
-        }
-      />
-      <Outlet />
-    </>
+    <SideBarListPage className="calendar-page" items={dates} view={Day}>
+      <div className="title">Kalendar</div>
+      <a href="#today-date">
+        <Icon name="Bar2" />
+      </a>
+    </SideBarListPage>
   )
 }

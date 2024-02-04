@@ -1,4 +1,6 @@
-import Icon from '@/components/icon'
+import Tag from '@/components/tag'
+
+import './recipe-item.scss'
 
 export default function RecipeItem({
   id,
@@ -18,18 +20,9 @@ export default function RecipeItem({
         <div className="info">
           <strong className="title">{name}</strong>
           <div className="attributes">
-            <span>
-              <Icon name="clock" />
-              {timing.total}
-            </span>
-            <span>
-              <Icon name="clock" />
-              {category.name}
-            </span>
-            <span>
-              <Icon name="Bookmark" />
-              {source.id}
-            </span>
+            <Tag icon="Clock">{timing.total}</Tag>
+            <Tag icon="Tag">{category.name}</Tag>
+            <Tag icon="Bookmark">{source.id}</Tag>
           </div>
           <p>{intro}</p>
         </div>

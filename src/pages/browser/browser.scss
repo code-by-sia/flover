@@ -1,0 +1,25 @@
+.browser {
+  @apply flex-1;
+
+  & > .header {
+    @apply bg-neutral-100 border-b;
+
+    .url-input {
+      @apply flex-1 relative;
+
+      input {
+        @apply p-1 bg-neutral-200 border-none outline-0 text-center text-gray-600;
+
+        &:focus-visible {
+          @apply ring-4 ring-primary/50;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    > .header {
+      @apply shadow-none;
+    }
+  }
+}

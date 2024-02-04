@@ -21,6 +21,11 @@ import {
   WindowIcon,
   PlusCircleIcon,
   NewspaperIcon,
+  ArrowPathIcon,
+  SquaresPlusIcon,
+  TrashIcon,
+  BookOpenIcon,
+  ArrowUpOnSquareIcon,
 } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 import { PlusCircleIcon as SolidPlusCircleIcon } from '@heroicons/react/24/solid'
@@ -34,6 +39,7 @@ const ICONS = {
   Tag: TagIcon,
   Rss: RssIcon,
   Bookmark: BookmarkIcon,
+  BookOpen: BookOpenIcon,
   Window: WindowIcon,
   CalendarDays: CalendarDaysIcon,
   ShoppingBag: ShoppingBagIcon,
@@ -49,6 +55,10 @@ const ICONS = {
   ArchiveBox: ArchiveBoxIcon,
   Bar2: Bars2Icon,
   Newspaper: NewspaperIcon,
+  ArrowPath: ArrowPathIcon,
+  ArrowUpOnSquare: ArrowUpOnSquareIcon,
+  SquaresPlus: SquaresPlusIcon,
+  Trash: TrashIcon,
 }
 
 export default function Icon({ name, className, ...props }) {

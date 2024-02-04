@@ -1,27 +1,14 @@
-import { Outlet, useParams } from 'react-router-dom'
-import List from '@/components/list'
+import { useParams } from 'react-router-dom'
 import { Recipes } from '@/pages/categories/data'
 import { useMemo } from 'react'
-import DrawerHeader from '@/components/container/drawe-header'
 import useQuery from '@/services/query'
 import RecipeItem from '@/pages/categories/recipe-item'
 import Icon from '@/components/icon'
 import { Categories } from '@/services/categories'
 import Button from '@/components/button'
-import './categories.scss'
+import { SideBarListPage } from '@/components/container/side-bar'
 
-function CategoryHeader({ name, count }) {
-  return (
-    <DrawerHeader>
-      <div className="title">
-        <strong>{name}</strong>
-        <small>{count} Rezepte</small>
-      </div>
-      <Icon name="MagnifyingGlass" />
-      <Icon name="SolidPlusCircle" />
-    </DrawerHeader>
-  )
-}
+import './categories.scss'
 
 export default function CategoriesHomePage() {
   const { categoryId, recipeId } = useParams()
@@ -30,15 +17,18 @@ export default function CategoriesHomePage() {
     () => category?.value || Categories[categoryId]?.value || categoryId,
     [categoryId, category]
   )
+
   return (
     <>
-      <List
-        className="categories"
-        items={Recipes}
-        view={RecipeItem}
-        title={<CategoryHeader name={title} count={6} />}
-      />
-      <Outlet />
+      <SideBarListPage view={RecipeItem} items={Recipes}>
+        <div className="title">
+          <strong>{title}</strong>
+          <small>{6} Rezepte</small>
+        </div>
+        <Icon name="MagnifyingGlass" />
+        <Icon name="SolidPlusCircle" />
+      </SideBarListPage>
+
       {!recipeId && (
         <div className="categories-empty-page">
           <Button className="toolbar">

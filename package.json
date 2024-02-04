@@ -16,6 +16,7 @@
         "@parcel/transformer-sass": "2.10.2",
         "@parcel/transformer-svg-react": "^2.10.2",
         "autoprefixer": "^10.4.16",
+        "buffer": "^5.5.0||^6.0.0",
         "classnames": "^2.5.1",
         "open-api-mocker": "^2.0.0",
         "parcel": "^2.10.2",

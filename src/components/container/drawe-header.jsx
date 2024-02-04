@@ -1,6 +1,5 @@
 import Icon from '@/components/icon'
 import './drawer-header.scss'
-import Spacer from '@/components/spacer'
 
 export default function DrawerHeader({ children }) {
   return (
