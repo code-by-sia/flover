@@ -7,6 +7,7 @@ import useQuery from '@/services/query'
 import RecipeItem from '@/pages/categories/recipe-item'
 import './categories.scss'
 import Icon from '@/components/icon'
+import { Categories } from '@/services/categories'
 
 function CategoryHeader({ name, count }) {
   return (
@@ -25,7 +26,7 @@ export default function CategoriesHomePage() {
   const { categoryId } = useParams()
   const category = useQuery('categories', categoryId)
   const title = useMemo(
-    () => category?.value || categoryId,
+    () => category?.value || Categories[categoryId]?.value || categoryId,
     [categoryId, category]
   )
   return (
